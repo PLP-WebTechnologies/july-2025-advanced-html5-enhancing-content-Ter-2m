@@ -1,0 +1,53 @@
+<form action="/submit-form.php" method="post">
+  <fieldset>
+    <legend>Personal Information</legend>
+
+    <p>
+      <label for="username">Username (min. 3, max. 15 characters):</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        minlength="3"
+        maxlength="15"
+        required
+      />
+    </p>
+
+    <p>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </p>
+
+    <p>
+      <label for="password">Password (at least 8 characters):</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        pattern=".{8,}"
+        title="Password must be at least 8 characters long."
+        required
+      />
+    </p>
+
+    <p>
+      <label for="age">Age (18-99):</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="18"
+        max="99"
+        required
+      />
+    </p>
+  </fieldset>
+
+  <p>
+    <label for="comment">Your Message:</label>
+    <textarea id="comment" name="comment" rows="5" cols="40"></textarea>
+  </p>
+
+  <button type="submit">Submit Form</button>
+</form>
